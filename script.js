@@ -27,6 +27,7 @@ button_scissors.addEventListener("click", (e) => {
 })
 
 
+
 const resWin = document.createElement("div");
 const res_container = document.createElement("div");
 document.body.appendChild(res_container);
@@ -38,17 +39,29 @@ function playRound(humanChoice, computerChoice) {
         humanChoice === "scissors" && computerChoice === "paper"
     ) {
         humanScore++;
-       resWin.textContent = `You won! ${humanChoice} beats ${computerChoice}`;
+        resWin.textContent = `You won! ${humanChoice} beats ${computerChoice}`;
     } else if (humanChoice === computerChoice) {
         humanScore++;
         computerScore++;
-        resWin.textContent = "Draw! Everyone +1!";
+        resWin.textContent = "Draw!";
     } else {
         computerScore++;
         resWin.textContent = `You lost! ${computerChoice} beats ${humanChoice}`;
     }
-    res_container.textContent = `the score is ${humanScore} vs ${computerScore}`;
-    
+    res_container.textContent = ` you: ${humanScore} \n vs \n computer: ${computerScore}`;
+
+    if (humanScore === 5) {
+        resWin.textContent = "Congrats! You won the game!";
+        humanScore = 0;
+        computerScore = 0;
+    }
+
+    if (computerScore === 5) {
+        resWin.textContent = "You lost the game";
+        humanScore = 0;
+        computerScore = 0;
+    }
+
 }
 
 
