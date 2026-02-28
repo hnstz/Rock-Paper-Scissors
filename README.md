@@ -1,3 +1,3 @@
 # Rock-Paper-Scissors
 
-console JS game.
+simple rock-paper-scissors JS game. 
