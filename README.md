@@ -28,4 +28,4 @@ Since this project uses entirely client-side technologies without external depen
 
 1. Clone the repository to your local machine:
    ```bash
-   git clone [https://github.com/yourusername/rock-paper-scissors.git](https://github.com/yourusername/rock-paper-scissors.git)
+   git clone [https://github.com/hnstz/rock-paper-scissors.git](https://github.com/hnstz/rock-paper-scissors.git)
